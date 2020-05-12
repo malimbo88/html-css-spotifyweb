@@ -1,6 +1,11 @@
 /** STYLE css **/
 
 /* RESET */
+body {
+  height: 100vh;
+  width: 100%;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -20,36 +25,71 @@ a {
   color: inherit;
 }
 
-body {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-nav , main {
-  height: calc( 100vh - 70px);
+/* GENERAL */
+main, footer {
+  width: 100%;
 }
 
 .container_flex {
   display: flex;
 }
 
-/** NAV **/
-nav {
-  background: purple;
-  width: 300px;
+.clear {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 /** MAIN **/
 main {
-  background-color: red;
-  width: calc( 100% - 300px );
+  height: calc(100vh - 70px);
+  position: relative;
+  z-index: 0;
+}
+
+nav.nav_macro_area, section.scroll_macro_area {
+  height: inherit;
+  float: left;
+}
+
+/* Navigation MACRO area */
+nav.nav_macro_area {
+  background: purple;
+  width: 300px;
+}
+
+.playlist {
+  background-color: green;
+  min-height: 30%;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.playlist ul {
+  font-size: 16px;
+}
+
+.user_band {
+  background-color: orange;
+  position: absolute;
+  bottom: 0px;
+  width: inherit;
+}
+
+/* Scroll MACRO area */
+section.scroll_macro_area {
+  background: yellow;
+  width: calc(100% - 300px);
+  overflow-y: scroll;
 }
 
 /** FOOTER **/
 footer {
-  width: 100%;
   height: 70px;
   background-color: pink;
+  position: relative;
+  z-index: 0;
+
 }
 
 /* Play Bar */
