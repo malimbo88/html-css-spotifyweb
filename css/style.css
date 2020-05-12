@@ -58,21 +58,27 @@ nav.nav_macro_area {
   width: 300px;
 }
 
+nav.nav_macro_area .container_flex {
+  flex-direction: column;
+  justify-content: flex-start;
+  height: inherit;
+}
+/* logo*/
+/* user_menu */
+/* playlist */
 .playlist {
   background-color: green;
-  min-height: 30%;
-  max-height: 100%;
   overflow-y: scroll;
+  flex-grow: 1;
 }
 
-.playlist ul {
+.playlist li {
   font-size: 16px;
 }
 
+/* user_band */
 .user_band {
   background-color: orange;
-  position: absolute;
-  bottom: 0px;
   width: inherit;
 }
 
@@ -80,7 +86,20 @@ nav.nav_macro_area {
 section.scroll_macro_area {
   background: yellow;
   width: calc(100% - 300px);
+}
+
+/* proposal selection */
+.proposal_selection {
   overflow-y: scroll;
+  height: inherit;
+}
+
+/* upgrade band */
+.upgrade_band {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 50px;
+  text-align: right;
+  color: white;
 }
 
 /** FOOTER **/
