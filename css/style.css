@@ -16,6 +16,14 @@ a {
   color: inherit;
 }
 
+hr {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  border-style: none;
+  border-width: 0px;
+}
+
 /* GENERAL */
 body {
   font-family: 'DM Sans', sans-serif;
@@ -24,7 +32,7 @@ body {
 .main_wrapper {
   height: 100vh;
   width: 100%;
-  min-width: 500px;
+  overflow: hidden;
 }
 
 .main_wrapper > * {
@@ -45,6 +53,29 @@ body {
 
 .empty > * {
   display: none;
+}
+
+/* scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #505050;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }
 
 /** MAIN **/
@@ -111,11 +142,10 @@ nav.nav_macro_area {
 
 nav.nav_macro_area > .container_flex {
   flex-direction: column;
-  padding: 5px 15px;
+  padding: 5px 0px 5px 15px;
 }
 
 nav.nav_macro_area > .container_flex > * {
-  height: auto;
   flex-shrink: 0;
 }
 
@@ -158,14 +188,90 @@ padding: 30px 0px;
 
 /* playlist */
 .playlist {
-  height: 30%;
+  height: 55%;
   flex-grow: 1;
   overflow-y: auto;
 }
 
+.playlist li {
+  padding-bottom: 10px;
+}
+
+.playlist h3 {
+  padding-bottom: 10px;
+}
+
+.add_playlist > li a > * {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.add_playlist {
+  padding-right: 15px;
+}
+.playlist hr {
+  height: 1px;
+  display: inline-block;
+  background-color: #5a5a5a;
+  text-align: right;
+  width: 200px;
+}
+
+.saved_playlist {
+  padding-top: 10px;
+}
+
+.square_btn.favorite_songs {
+  background: linear-gradient(135deg,#450af5,#c4efd9);
+}
+
+.square_btn.favorite_songs > * {
+  color: #B3B3B3;
+}
+
 /* user_band */
-.user_band {
-  background-color: orange;
+.app_install {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.app_install a > * {
+  vertical-align: top;
+}
+
+.user_band li {
+  padding: 10px 0px;
+}
+
+.user_band li:first-child {
+  border-bottom: 1px solid #5a5a5a;
+}
+
+.user_band li a > *{
+  display: inline-block;
+}
+
+.user_band li.app_install a > img {
+  width: 18px;
+}
+
+.profile_frame > img {
+  height: 90%;
+}
+
+.account_profile a > * {
+  vertical-align: middle;
+}
+
+.profile_frame {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #B3B3B3;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* Scroll MACRO area */
