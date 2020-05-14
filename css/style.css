@@ -25,7 +25,6 @@ body {
   height: 100vh;
   width: 100%;
   min-width: 500px;
-  background: black;
 }
 
 .main_wrapper > * {
@@ -59,7 +58,7 @@ main > * {
   overflow: hidden;
 }
 
-.style_type {
+.style_type * {
   font-size: 14px;
   color: #B3B3B3;
 }
@@ -89,37 +88,77 @@ main > * {
   font-size: 12px;
 }
 
-.style_type span {
-  color: #707070;
+/* GENERAL square btn */
+.square_btn {
+  width: 30px;
+  height: 30px;
+  background-color: #B3B3B3;
+  text-align: center;
+}
+
+.square_btn > span {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #282828;
 }
 
 /* Navigation MACRO area */
 nav.nav_macro_area {
-  background: purple;
   width: 230px;
+  background-color: #282828;
 }
 
-nav.nav_macro_area .container_flex {
+nav.nav_macro_area > .container_flex {
   flex-direction: column;
+  padding: 5px 15px;
 }
 
-.nav_flex > * {
+nav.nav_macro_area > .container_flex > * {
   height: auto;
   flex-shrink: 0;
 }
 
 /* logo*/
 .logo {
-  background-color: coral;
+  padding-top: 10px;
 }
+
+.logo > img {
+  width: 60%;
+}
+
 /* user_menu */
 .user_menu {
-  background-color: green;
+padding: 30px 0px;
 }
+
+.user_menu ul > li:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.user_menu li a > img {
+  width: 18px;
+  opacity: 50%;
+}
+
+
+.user_menu li a > * {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.user_menu li a:hover > * {
+  color: #fff;
+  opacity: 100%;
+}
+
 /* playlist */
 .playlist {
   height: 30%;
-  background-color: white;
   flex-grow: 1;
   overflow-y: auto;
 }
@@ -252,10 +291,11 @@ footer > * {
 /* save songs */
 .save_songs {
   height: 100%;
+  flex-basis: 18%;
 }
 
 .save_songs > .container_flex {
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -268,7 +308,7 @@ footer > * {
 }
 
 .save_songs i {
-  padding: 2.5px 0px 2.5px 5px;
+  padding-bottom: 5px;
 }
 
 /* RIGHT - volume setting */
@@ -323,7 +363,7 @@ footer > * {
   color: #fff;
 }
 
-.progress_bar {
+.song_play_progress .progress_bar {
   margin:15px 5px 0px 5px;
 }
 
