@@ -24,6 +24,7 @@ body {
 .main_wrapper {
   height: 100vh;
   width: 100%;
+  min-width: 500px;
   background: black;
 }
 
@@ -95,7 +96,7 @@ main > * {
 /* Navigation MACRO area */
 nav.nav_macro_area {
   background: purple;
-  width: 300px;
+  width: 230px;
 }
 
 nav.nav_macro_area .container_flex {
@@ -131,7 +132,7 @@ nav.nav_macro_area .container_flex {
 /* Scroll MACRO area */
 section.scroll_macro_area {
   background: yellow;
-  width: calc( 100% - 300px );
+  width: calc( 100% - 230px );
   overflow-y: auto;
 }
 
@@ -167,6 +168,7 @@ footer > * {
   background-color: #5a5a5a;
   border-radius: 100px;
   height: 4px;
+  width: 100%;
 }
 
 .progress_value {
@@ -204,33 +206,47 @@ footer > * {
 
 .play_bar > .container_flex {
   justify-content: space-between;
-}
-
-.play_bar > .container_flex,
-.lft_songs > .container_flex,
-.top_play_options > .container_flex,
-.song_play_progress > .container_flex,
-.rgt_volume > .container_flex {
   align-items: center;
 }
 
-.song_play_progress > .container_flex,
-.top_play_options >.container_flex {
-  justify-content: center;
+.play_bar i:hover {
+  color: #fff;
+}
+
+/* LEFT - play songs & RIGHT - volume setting- */
+.lft_songs,
+.rgt_volume {
+  height: 100%;
+  flex-basis: 215px;
+}
+
+.lft_songs > .container_flex,
+.rgt_volume > .container_flex {
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* LEFT - play songs */
-.lft_songs {
-  height: 100%;
-}
-
-/* selected cover */
 .selected_cover {
+  height: 80%;
+  flex-basis: 60%;
+}
+
+.selected_cover img {
   height: 100%;
 }
 
-.selected_cover > img {
-  height: 100%;
+.selected_cover > .container_flex {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.track_info {
+  padding-left: 5px;
+}
+
+.track_info a:hover span {
+  text-decoration: underline;
 }
 
 /* save songs */
@@ -238,34 +254,61 @@ footer > * {
   flex-shrink: 1;
 }
 
-.save_song * {
-  color: #707070;
+.save_songs > * {
+  padding-left: 5px;
+}
+
+/* RIGHT - volume setting */
+.volume_setting_icons {
+  flex-basis: 100%;
+}
+
+.volume_setting_icons i {
+  font-size: 12px;
+  padding-right: 5px;
+}
+
+.volume_setting_icons > .container_flex {
+  justify-content: space-around;
 }
 
 /* CENTRAL - audio bar */
 .ctr_audio_bar {
-  flex-grow: 1;
-  text-align: center;
+  flex-shrink: 0;
+  flex-basis: 45%;
+  padding: 0px 5px;
 }
 
-/* Top play options */
-/* song progress bar */
-.song_play_progress .progress_bar {
-  width: 80%;
+/* CENTRAL - TOP & BOTTOM - audio bar */
+.top_play_options >.container_flex,
+.song_play_progress > .container_flex {
+  justify-content: center;
+  align-items: center;
 }
 
-.song_play_progress .progress_value {
-  width: 30%;
+/* CENTRAL - TOP - play options */
+.top_play_options i {
+  padding: 0px 15px;
+}
+.top_play_options i.fa-play-circle {
+  font-size: 24px;
 }
 
-/* RIGHT volume setting */
-.rgt_volume .progress_bar {
-  width: 100px;
+.top_play_options i.fa-play-circle:hover {
+  color: #fff;
+  transform: scale( 1.1 );
 }
 
-.rgt_volume .progress_value {
-  width: 30%;
+/* CENTRAL - BOTTOM - song progress bar */
+.song_play_progress span {
+  font-size: 10px;
+  color: #fff;
 }
+
+.progress_bar {
+  margin: 15px 5px;
+}
+
 
 
 
