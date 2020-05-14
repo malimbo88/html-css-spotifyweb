@@ -251,11 +251,24 @@ footer > * {
 
 /* save songs */
 .save_songs {
-  flex-shrink: 1;
+  height: 100%;
 }
 
-.save_songs > * {
-  padding-left: 5px;
+.save_songs > .container_flex {
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+@media all and (max-width: 768px){
+  .save_songs > .container_flex {
+  flex-direction: column;
+  justify-content: center;
+  }
+}
+
+.save_songs i {
+  padding: 2.5px 0px 2.5px 5px;
 }
 
 /* RIGHT - volume setting */
@@ -280,16 +293,16 @@ footer > * {
 }
 
 /* CENTRAL - TOP & BOTTOM - audio bar */
-.top_play_options >.container_flex,
-.song_play_progress > .container_flex {
-  justify-content: center;
+.top_play_options {
+  width: 180px;
+  margin: 0 auto;
+}
+.top_play_options >.container_flex {
+  justify-content: space-between;
   align-items: center;
 }
 
 /* CENTRAL - TOP - play options */
-.top_play_options i {
-  padding: 0px 15px;
-}
 .top_play_options i.fa-play-circle {
   font-size: 24px;
 }
@@ -300,13 +313,18 @@ footer > * {
 }
 
 /* CENTRAL - BOTTOM - song progress bar */
+.song_play_progress > .container_flex {
+  justify-content: center;
+  align-items: baseline;
+}
+
 .song_play_progress span {
   font-size: 10px;
   color: #fff;
 }
 
 .progress_bar {
-  margin: 15px 5px;
+  margin:15px 5px 0px 5px;
 }
 
 
