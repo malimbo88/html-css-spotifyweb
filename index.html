@@ -16,19 +16,22 @@
       <!-- MAIN -->
       <main class="style_type">
 
-        <!-- Navigation-->
+        <!-- NAV navigation-->
         <nav class="nav_macro_area">
           <div class="container_flex">
 
             <!-- Logo -->
-            <div class="logo">
+            <div class="logo none_maxwidth_480">
               <img src="img/logo.svg" alt="Logo">
+            </div>
+            <div class="logo none_minwidth_480">
+              <img src="img/logo-small.svg" alt="Logo">
             </div>
             <!-- end Logo -->
 
             <!-- User Menu -->
             <div class="user_menu">
-              <ul>
+              <ul class="nav_items">
                 <li>
                   <a href="#" target="_blank">
                     <img src="img/home.svg" alt="Home">
@@ -51,13 +54,13 @@
             </div>
             <!-- end User Menu -->
 
-            <!-- playlist -->
-            <div class="playlist">
+            <!-- TOP Playlist -->
+            <div class="top_playlist playlist none_maxwidth_480">
 
               <h3>playlist</h3>
 
               <!-- add playlist -->
-              <ul class="add_playlist">
+              <ul class="add_playlist nav_items">
                 <li>
                   <a href="#" target="_blank">
                     <div class="square_btn">
@@ -76,20 +79,42 @@
                 </li>
               </ul>
               <!-- end add playlist -->
-<hr>
+
+            </div>
+            <!-- end TOP - Playlist -->
+
+            <!-- BOTTOM Playlist -->
+            <div class="bottom_playlist playlist none_maxwidth_480">
+
               <!-- saved playlist -->
               <ul class="saved_playlist">
-                <li>Breathe ON - ADULT.</li>
-                <li>Discover Weekly</li>
-                <li>Add to My favorites</li>
-                <li>iTunes</li>
+                <li>
+                  <a href="#" target="_blank">
+                    <span>Breathe ON - ADULT.</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <span>Discover Weekly</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <span>Add to My favorites</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <span>iTunes</span>
+                  </a>
+                </li>
               </ul>
               <!-- saved playlist -->
 
             </div>
-            <!-- end playlist -->
+            <!-- BOTTOM Playlist -->
 
-            <!-- user band -->
+            <!-- User Band -->
             <div class="user_band">
               <ul>
                 <li class="app_install">
@@ -108,18 +133,18 @@
                 </li>
               </ul>
             </div>
-            <!-- user band -->
+            <!-- User Band -->
 
           </div>
         </nav>
-        <!-- end Navigation -->
+        <!-- end NAV navigation -->
 
-        <!-- Section -->
+        <!-- MAIN Section -->
         <section class="scroll_macro_area">
           <div class="upgrade_band">Upgrade</div>
           <div class="proposal_selection"></div>
         </section>
-        <!-- end Section -->
+        <!-- end MAIN Section -->
 
       </main>
       <!-- end MAIN -->
@@ -145,7 +170,7 @@
                       </div>
                       <div>
                         <a href="#" target="_blank">
-                          <span>Track Name<span>
+                          <span>Track&nbsp;<br class="none_minwidth_480">Name<span>
                           </a>
                       </div>
                     </div>
@@ -154,7 +179,7 @@
                 <!-- end selected cover -->
 
                 <!-- save song -->
-                <div class="save_songs">
+                <div class="save_songs none_maxwidth_480">
                   <div class="container_flex">
                     <i class="far fa-folder"></i>
                     <i class="far fa-heart"></i>
@@ -212,12 +237,14 @@
                   <div class="container_flex">
                     <i class="fas fa-list"></i>
                     <i class="fas fa-tv"></i>
-                    <i class="fas fa-volume-up"></i>
+                    <i class="fas fa-volume-up none_maxwidth_480"></i>
+                    <i class="far fa-folder none_minwidth_480"></i>
+                    <i class="far fa-heart none_minwidth_480"></i>
                   </div>
                 </div>
 
                 <!-- progress bar -->
-                <div class="progress_bar">
+                <div class="progress_bar none_maxwidth_480">
                   <div class="progress_value">
                     <div class="round_handle empty">
                       <span>Round handle Progress Bar</span>
